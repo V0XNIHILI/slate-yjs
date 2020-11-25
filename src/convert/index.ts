@@ -1,4 +1,4 @@
-import _ from 'lodash';
+imort { flatten } from 'lodash-es';
 import { Operation } from 'slate';
 import * as Y from 'yjs';
 import arrayEvent from './arrayEvent';
@@ -11,7 +11,7 @@ import textEvent from './textEvent';
  * @param events
  */
 export const toSlateOps = (events: Y.YEvent[]): Operation[] => {
-  return _.flatten(events.map(toSlateOp));
+  return flatten(events.map(toSlateOp));
 };
 
 /**
